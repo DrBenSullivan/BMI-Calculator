@@ -1,0 +1,57 @@
+body {
+	background-color: #c3deeb;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+h1 {
+	margin: 10px;
+	color: #51519e;
+}
+
+.container {
+	margin: 10px;
+	display: inline-block;
+	padding: 20px;
+	background-color: #8fc8e3;
+	color: #51519e;
+	border: solid 2px #51519e;
+	border-radius: 10px;
+}
+
+#output {
+	font-style: italic;
+}
+
+#height, #age, #weight, .middle{
+	width: 120px;
+}
+
+#heightUnit, #weightUnit, .right {
+	width: 120px;
+}
+
+.left {
+	width: 50px;
+}
+
+.column{
+	float: left;
+}
+
+.row:after{
+	content: "";
+	display: table;
+	clear:both;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 45px 120px 120px;
+	grid-template-rows: 10px 10px;
+	margin-top: 20px;
+	gap: 20px;
+}
+
+.grid-item{
+	text-align:left;
+}
