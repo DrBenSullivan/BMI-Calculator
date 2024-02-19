@@ -6,24 +6,24 @@
 </head>
 <body>
 	<h1>BMI Calculator</h1> 	<!--Heading.-->
-	<div class = "container">	<!--Create div for calculator.-->
+	<div class="container">	<!--Create div for calculator.-->
 		Enter the information below and click submit to calculate BMI.
-			<div class = "grid-container">	<!--Create grid to place Label, Field and Select elements in columns to improve aesthetic.-->
-				<div class = "grid-item">
+			<div class="grid-container">	<!--Create grid to place Label, Field and Select elements in columns to improve aesthetic.-->
+				<div class="grid-item">
 					Age:
 				</div>
-				<div class = "grid-item">
-					<input id="age" placeholder = "Enter age" type = "number" min = 0 max = 120 />
+				<div class="grid-item">
+					<input id="age" placeholder="Enter age" type="number" min=0 max=120 />
 				</div>
-				<div class = "grid-item">
+				<div class="grid-item">
 				</div>
-				<div class = "grid-item">
+				<div class="grid-item">
 					Height: 
 				</div>
-				<div class = "grid-item">
-					<input id="height" placeholder = "Select units" type = "number" disabled/>
+				<div class="grid-item">
+					<input id="height" placeholder="Select units" type="number" disabled/>
 				</div>
-				<div class = "grid-item">
+				<div class="grid-item">
 				<select id="heightUnit">
 					<option selected disabled>Units</option>
 					<option value="metres">Metres (m)</option>
@@ -31,13 +31,13 @@
 					<option value="inches">Inches (in)</option>
 				</select>
 				</div>
-				<div class = "grid-item">
+				<div class="grid-item">
 					Weight:
 				</div>
-				<div class = "grid-item">
-					<input id="weight" placeholder = "Select units" disabled type = "number"/>
+				<div class="grid-item">
+					<input id="weight" placeholder="Select units" disabled type="number"/>
 				</div>
-				<div class = "grid-item">
+				<div class="grid-item">
 					<select id="weightUnit">
 						<option selected disabled>Units</option>
 						<option value="kilograms">Kilograms (kg)</option>
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		<p id="output">Awaiting input...</p>	<!--Placeholder for output.-->
-		<button onclick="calculateBmi()">Submit</button>	
+		<button id="submitButton">Submit</button>	
 	</div>
 	<script src="script.js"></script>
 </body>
