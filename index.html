@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="styles.css">
-	<title>BMI Calculator</title>
-</head>
-<body>
-	<h1>BMI Calculator</h1> 	<!--Heading.-->
-	<div class="container">	<!--Create div for calculator.-->
-		Enter the information below and click submit to calculate BMI.
-			<div class="grid-container">	<!--Create grid to place Label, Field and Select elements in columns to improve aesthetic.-->
-				<div class="grid-item">
-					Age:
-				</div>
-				<div class="grid-item">
-					<input id="age" placeholder="Enter age" type="number" min=0 max=120 />
-				</div>
-				<div class="grid-item">
-				</div>
-				<div class="grid-item">
-					Height: 
-				</div>
-				<div class="grid-item">
-					<input id="height" placeholder="Select units" type="number" disabled/>
-				</div>
-				<div class="grid-item">
-				<select id="heightUnit">
-					<option selected disabled>Units</option>
-					<option value="metres">Metres (m)</option>
-					<option value="centimetres">Centimetres (cm)</option>
-					<option value="inches">Inches (in)</option>
-				</select>
-				</div>
-				<div class="grid-item">
-					Weight:
-				</div>
-				<div class="grid-item">
-					<input id="weight" placeholder="Select units" disabled type="number"/>
-				</div>
-				<div class="grid-item">
-					<select id="weightUnit">
-						<option selected disabled>Units</option>
-						<option value="kilograms">Kilograms (kg)</option>
-						<option value="pounds">Pounds (lb)</option>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<title>BMI Calculator</title>
+	</head>
+	<body>
+		<div class="container__heading">BMI Calculator</div>
+		<div class="container__body">
+			Enter the information below and click submit to calculate BMI.
+				<div class="grid-3x3">
+
+					<!--First row-->
+					<div class="grid-item label">Age:</div>
+					<input id="age-input" class="grid-item" placeholder="Age (y)" type="number" min="0" max="120" />
+					<div class="grid-item"></div>
+
+					<!--Second row-->
+					<div class="grid-item label">Height:</div>
+					<input id="height-input" class="grid-item" placeholder="Select units" type="number" disabled/>
+					<select id="height-unit-input" class="grid-item">
+							<option selected disabled>Units</option>
+							<option value="m">Metres (m)</option>
+							<option value="cm">Centimetres (cm)</option>
+							<option value="in">Inches (in)</option>
+							<option value="imperial">Imperial (ft, in)</option>
 					</select>
+
+					<!--Third row-->
+					<div class="grid-item label">Weight:</div>
+					<input id="weight-input" class="grid-item" placeholder="Select units" type="number" disabled/>
+					<select id="weight-unit-input" class="grid-item">
+						<option selected disabled>Units</option>
+						<option value="kg">Kilograms (kg)</option>
+						<option value="lb">Pounds (lb)</option>
+						<option value="imperial">Imperial (st, lb)</option>
+					</select>
+
 				</div>
-			</div>
-		<p id="output">Awaiting input...</p>	<!--Placeholder for output.-->
-		<button id="submitButton">Submit</button>	
-	</div>
-	<script src="script.js"></script>
-</body>
+			<button id="submit-button">Submit</button>
+			<p id="output"></p>		
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
